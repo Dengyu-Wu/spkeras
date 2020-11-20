@@ -59,7 +59,7 @@ from spkeras.models import cnn_to_snn
 #Current normalisation using cnn_to_snn
 ##Default: signed_bit=0, amp_factor=100, method=1, epsilon = 0.001
 
-snn_model = cnn_to_snn()(cnn_model,x_train)
+snn_model = cnn_to_snn(signed_bit=0)(cnn_model,x_train)
 
 #Evaluate SNN accuracy
 ##Default: timesteps=256, thresholding=0.5, scaling_factor=1, noneloss=False, spike_ext=0 
@@ -74,6 +74,29 @@ s_max,s = snn_model.SpikeCounter(x_train,timesteps=256)
 n = snn_model.NeuronNumbers(mode=0)
 ```
 
+#### Attributes
+```python
+'''
+--------------------------
+cnn_to_snnn
+--------------------------
+sigbed_bit: bitwidth of weights, default 0 (32-bit) 
+amp_factor: amplification factor, default 100
+method    : default 1
+epsilon   : 0.001
+--------------------------
+evaluate & SpikeCounter
+--------------------------
+timesteps   : inference time, default 256.
+thresholding: default 0.5.
+noneloss    : noneloss mode, default False.
+spike_ext   : extra inference time, default 0. (-1 for unlimited inference time) 
+--------------------------
+NeuronNumber
+--------------------------
+mode: set 1 to exclude average pooling layer, default 0
+'''
+```
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -85,6 +108,6 @@ _For more examples, please refer to the [Examples](./examples/)_
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-
+<!-- PUBLICATION -->
+## Pubilcation
+[Anonymous 2020]
