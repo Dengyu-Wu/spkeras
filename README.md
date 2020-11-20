@@ -76,14 +76,9 @@ cnn_model = load_model('cnn_model.h5')
 #Convert CNN into SNN
 from spkeras.models import cnn_to_snn
 
-#Current normalisation 
-'''
-cnn_to_snn default attributions:
-signed_bit=0,    #weight precision 
-amp_factor=100,  #amplification factor
-scaling_factor=1,#Threshold scaling factor 
-method=1,		 #0:Threshold balancing 1:Weight normalisation
-epsilon = 0.001  #Epsilon for batchnormalisation'''
+#Current normalisation using cnn_to_snn
+#Default attributions: signed_bit=0,amp_factor=100, scaling_factor=1,method=1, epsilon = 0.001
+
 snn_model = cnn_to_snn()(cnn_model,x_train)
 
 #Evaluate SNN accuracy
