@@ -87,11 +87,11 @@ _,acc = snn_model.evaluate(x_test,y_test,timesteps=256)
 
 #Count SNN spikes
 ##Default: timesteps=256, thresholding=0.5, scaling_factor=1, noneloss=False, spike_ext=0, mode=0
-s_max,s = snn_model.CountSpikes(x_train,timesteps=256)
+s_max,s = snn_model.SpikeCounter(x_train,timesteps=256)
 
 #Count neuron numbers
 ##Default: mode = 0
-n = snn_model.NeuronNumbers()
+n = snn_model.NeuronNumbers(mode=0)
 ```
 
 <!-- USAGE EXAMPLES -->
