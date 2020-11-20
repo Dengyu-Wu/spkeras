@@ -78,7 +78,7 @@ n = snn_model.NeuronNumbers(mode=0)
 ```python
 '''
 --------------------------
-cnn_to_snnn
+cnn_to_snn
 --------------------------
 sigbed_bit: bitwidth of weights, default 0 (32-bit) 
 amp_factor: amplification factor, default 100
@@ -91,6 +91,10 @@ timesteps   : inference time, default 256.
 thresholding: default 0.5.
 noneloss    : noneloss mode, default False.
 spike_ext   : extra inference time, default 0. (-1 for unlimited inference time) 
+--------------------------
+SpikeCounter
+--------------------------
+mode: set 1 to count number of neurons under different spikes, default 0
 --------------------------
 NeuronNumber
 --------------------------
