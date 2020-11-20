@@ -93,10 +93,10 @@ snn_model = cnn_to_snn()(cnn_model,x_train)
 _,acc = snn_model.evaluate(x_test,y_test,timesteps=256)
 
 #Count SNN spikes
-S_max,S = snn_model.CountSpikes(x_train,timesteps=256)
+s_max,s = snn_model.CountSpikes(x_train,timesteps=256)
 
 #Count neuron numbers
-N = snn_model.NeuronNumbers()
+n = snn_model.NeuronNumbers()
 
 
 
