@@ -77,17 +77,20 @@ cnn_model = load_model('cnn_model.h5')
 from spkeras.models import cnn_to_snn
 
 #Current normalisation using cnn_to_snn
-#Default attributions: signed_bit=0,amp_factor=100, scaling_factor=1,method=1, epsilon = 0.001
+##Default: signed_bit=0, amp_factor=100, method=1, epsilon = 0.001
 
 snn_model = cnn_to_snn()(cnn_model,x_train)
 
 #Evaluate SNN accuracy
+##Default: timesteps=256, thresholding=0.5, scaling_factor=1, noneloss=False, spike_ext=0 
 _,acc = snn_model.evaluate(x_test,y_test,timesteps=256)
 
 #Count SNN spikes
+##Default: timesteps=256, thresholding=0.5, scaling_factor=1, noneloss=False, spike_ext=0, mode=0
 s_max,s = snn_model.CountSpikes(x_train,timesteps=256)
 
 #Count neuron numbers
+##Default: mode = 0
 n = snn_model.NeuronNumbers()
 ```
 
