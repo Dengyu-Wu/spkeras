@@ -78,9 +78,13 @@ from spkeras.models import cnn_to_snn
 
 #Current normalisation 
 '''
-cnn_to_snn attributions:
-signed_bit=0,scaling_factor=1,method=1,amp_factor=100,epsilon = 0.001'''
-snn_model = cnn_to_snn(signed_bit=0,scaling_factor=1,method=1,amp_factor=100,epsilon = 0.001)(cnn_model,x_train)
+cnn_to_snn default attributions:
+signed_bit=0,    #weight precision 
+amp_factor=100,  #amplification factor
+scaling_factor=1,#Threshold scaling factor 
+method=1,		 #0:Threshold balancing 1:Weight normalisation
+epsilon = 0.001  #Epsilon for batchnormalisation'''
+snn_model = cnn_to_snn()(cnn_model,x_train)
 
 #Evaluate SNN accuracy
 _,acc = snn_model.evaluate(x_test,y_test,timesteps=256)
