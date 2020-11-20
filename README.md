@@ -79,10 +79,8 @@ from spkeras.models import cnn_to_snn
 #Current normalisation 
 '''
 cnn_to_snn attributions:
-				 timesteps=256,thresholding=0.5,signed_bit=0,scaling_factor=1,
-				 method=1,amp_factor=100,epsilon = 0.001, spike_ext=0,noneloss=False
-'''
-snn_model = cnn_to_snn()(cnn_model,x_train)
+signed_bit=0,scaling_factor=1,method=1,amp_factor=100,epsilon = 0.001'''
+snn_model = cnn_to_snn(signed_bit=0,scaling_factor=1,method=1,amp_factor=100,epsilon = 0.001)(cnn_model,x_train)
 
 #Evaluate SNN accuracy
 _,acc = snn_model.evaluate(x_test,y_test,timesteps=256)
