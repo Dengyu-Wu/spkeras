@@ -89,8 +89,16 @@ from spkeras.models import cnn_to_snn
 from spkeras.utils import load_pickle, save_pickle
 snn_model = cnn_to_snn()(cnn_model,x_train)
 
-#Evaluate SNN
-snn_model.evaluate(x_test,y_test,timesteps=256)
+#Evaluate SNN accuracy
+_,acc = snn_model.evaluate(x_test,y_test,timesteps=256)
+
+#Count SNN spikes
+S_max,S = snn_model.CountSpikes(x_train,timesteps=256)
+
+#Count neuron numbers
+N = snn_model.NeuronNumbers()
+
+
 
 ```
 
