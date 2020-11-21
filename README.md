@@ -18,11 +18,11 @@ Spkeras can easily get and evaluate rate-based spiking neural networks (SNNs), b
 
 ### Built With
 Spkeras has extension layers, e.g. CurrentBias and SpikeForward, following Tensorflow-keras design syntax. 
-* [Tensorflow-keras](https://tensorflow.org)
-
+* [Tensorflow-keras](https://www.tensorflow.org/guide/keras/sequential_model)
 
 <!-- GETTING STARTED -->
 ## Getting Started
+The package is tested in Python 3.7.6 and Tensorflow 2.3.1.
 
 ### Prerequisites
 
