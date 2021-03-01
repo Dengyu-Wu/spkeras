@@ -113,5 +113,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- PUBLICATION -->
-## Pubilcation
-[Anonymous 2020]
+## ArXiv Paper
+
