@@ -114,5 +114,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- PUBLICATION -->
 ## More details
-<a href="https://intranet.csc.liv.ac.uk/~dengyu/research-post/research-post-1/">paper</a>
+<a href="https://arxiv.org/abs/2103.00944">paper</a>
 
