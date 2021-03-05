@@ -1,1 +1,1 @@
-Created direcory for results
+Directory for results
