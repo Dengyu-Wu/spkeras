@@ -332,7 +332,7 @@ class cnn_to_snn(object):
             #print('.',end='')
             layer_type = type(layer).__name__
 
-            if layer_type == 'SpikeForward':
+            if layer_type == 'SpikeActivation':
                 print(layer.__class__.__name__)
                 functor= K.function([model.layers[0].input], [layer.output])
                 _cnt = []
@@ -379,7 +379,7 @@ class cnn_to_snn(object):
                 print(layer.__class__.__name__)
                 s.append(layer.weights[0].shape)
                             
-            if layer_type == 'SpikeForward': 
+            if layer_type == 'SpikeActivation': 
                 print(layer.__class__.__name__)
                 if hasattr(model.layers[k-1], 'pool_size') and mode == 1:
                     k +=1
