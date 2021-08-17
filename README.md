@@ -15,14 +15,13 @@ Spkeras can easily get and evaluate rate-based spiking neural networks (SNNs), b
 * Convert CNNs into SNNs using Spkeras
 * Evaluate SNNs and get parameters, e.g. weights, bias and thresholds
 
-## New Features
-* Works with Keras Functional API, for example:
-    * convert add layer
-
-
 ### Built With
 Spkeras has extension layers, e.g. CurrentBias and SpikeForward, following Tensorflow-keras design syntax. 
 * [Tensorflow-keras](https://www.tensorflow.org/guide/keras/sequential_model)
+
+## New Features
+* Works with Keras Functional API, for example:
+    * convert add layer
 
 <!-- GETTING STARTED -->
 ## Getting Started
