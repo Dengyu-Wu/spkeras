@@ -21,7 +21,7 @@ Spkeras has extension layers, e.g. CurrentBias and SpikeForward, following Tenso
 
 ## New Features
 * Works with Keras Functional API, for example:
-    * convert add layer
+    * convert Add Layer
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -40,6 +40,25 @@ pip install tensorflow
 ```sh
 git clone https://github.com/(Anonymous)/spkeras.git
 ```
+### Coding for SpKeras 
+SpKeras will detect the Activation Layer in CNN to create SpikeActivation Layer. It means all activation function should stay inside Activation Layer, including Softmax and Sigmoid. 
+
+```python
+#Sequential model
+model.add(Conv2D(64, (3, 3), padding='same')
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+
+#Functional API
+x = Conv2D( 64, (3,3), padding="same")(inputs)
+x = BatchNormalization()(x)
+x = Activation("relu")(x)
+x = Conv2D( 64, (3,3), padding="same")(x)
+x = BatchNormalization()(x)
+x = Activation("relu")(x)
+x = add([x, inputs])
+```
+
 ### Example
 ```python
 #load dataset and cnn model
