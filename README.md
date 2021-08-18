@@ -7,7 +7,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Spkeras
+## Spkeras 2.0
 <img src="./doc/Spkeras_Framework.png">
 
 Spkeras can easily get and evaluate rate-based spiking neural networks (SNNs), by following steps:
