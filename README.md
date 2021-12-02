@@ -19,8 +19,7 @@ SpKeras can easily get and evaluate rate-based spiking neural networks (SNNs), b
 * [Tensorflow-keras](https://www.tensorflow.org/guide/keras/sequential_model)
 
 ## New Features
-* Works with Keras Functional API, for example:
-    * convert Add Layer
+* Works with Keras Functional API
 
 <!-- GETTING STARTED -->
 ## Getting Started
