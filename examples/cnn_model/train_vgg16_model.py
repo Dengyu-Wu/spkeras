@@ -22,7 +22,7 @@ class build_model:
         if train:
             self.model = self.train(self.model)
         else:
-            self.model.load_weights('cnn_mdl..h5')
+            self.model.load_weights('cnn_mdl.h5')
             self.model = self.train(self.model)
 
     def extract_model(self):
