@@ -48,12 +48,8 @@ class build_model:
     def build_model(self):
          # Build the network of vgg for 10 classes with massive dropout and weight decay as described in the paper.
         use_bias = True
-        model = Sequential()
         weight_decay = self.weight_decay
         inputs = Input(self.x_shape)
-        scale = 0.0
-        maxvalue = 0
-        enable = False
         
         x = Conv2D(64, (3, 3), padding='same',use_bias=use_bias,
                          kernel_regularizer=regularizers.l2(weight_decay))(inputs)
