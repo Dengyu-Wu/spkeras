@@ -140,7 +140,7 @@ class build_model:
         datagen.fit(x_train)
         
         #optimization details
-        sgd = optimizers.SGD(lr=learning_rate, decay=lr_decay, momentum=0.9, nesterov=True)
+        sgd = optimizers.SGD(learning_rate=learning_rate, decay=lr_decay, momentum=0.9, nesterov=True)
         model.compile(loss='categorical_crossentropy', optimizer=sgd,metrics=['accuracy'])
             
         # training process in a for loop with learning rate drop every 25 epoches.
