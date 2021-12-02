@@ -7,16 +7,15 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Spkeras 2.0
+## SpKeras 2.0
 <img src="./doc/Spkeras_Framework.png">
 
-Spkeras can easily get and evaluate rate-based spiking neural networks (SNNs), by following steps:
+SpKeras can easily get and evaluate rate-based spiking neural networks (SNNs), by following steps:
 * Pre-train Convolutional neural networks (CNNs) using Tensorflow-keras
-* Convert CNNs into SNNs using Spkeras
+* Convert CNNs into SNNs using SpKeras
 * Evaluate SNNs and get parameters, e.g. weights, bias and thresholds
 
 ### Built With
-Spkeras has extension layers, e.g. CurrentBias and SpikeForward, following Tensorflow-keras design syntax. 
 * [Tensorflow-keras](https://www.tensorflow.org/guide/keras/sequential_model)
 
 ## New Features
@@ -52,11 +51,11 @@ model.add(Activation('relu'))
 #Functional API
 x = Conv2D( 64, (3,3), padding="same")(inputs)
 x = BatchNormalization()(x)
-x = Activation("relu")(x)
-x = Conv2D( 64, (3,3), padding="same")(x)
+node = Activation("relu")(x)
+x = Conv2D( 64, (3,3), padding="same")(node)
 x = BatchNormalization()(x)
 x = Activation("relu")(x)
-x = add([x, inputs])
+x = add([x, node])
 ```
 
 ### Example
