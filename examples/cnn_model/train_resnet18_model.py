@@ -11,7 +11,7 @@ import numpy as np
 from tensorflow.keras import backend as K
 from tensorflow.keras import regularizers
 from tensorflow.keras import initializers
-from spkeras2.layers import Regularizer
+from spkeras.layers import Regularizer
 
 def Residual(inputs,filters,kernel_size,dropout):
     x = Conv2D( filters,
