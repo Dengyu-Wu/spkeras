@@ -66,7 +66,7 @@ class cnn_to_snn(object):
             layer_type = type(layer).__name__
             if _weights != [] and hasattr(layer, 'activation') :
                 if not layer.use_bias:
-                    _weights = [_weights,0] 
+                    _weights = [_weights[0],0] 
                 _weights = [_weights,1] 
                 weights.append(_weights)
             if layer_type == 'AveragePooling2D':
@@ -94,14 +94,17 @@ class cnn_to_snn(object):
             norm = 1
             if bit > 0:
                 norm = np.max(np.abs(_weights[0]))
-                _weights[0] = _weights[0]/norm*2**bit
+                _weights[0] = _weights[0]*2**bit/norm
                 _weights[0] = _weights[0].astype(int)   
                 _weights[0] = _weights[0]/2**bit
+                
             _bias = kappa*_weights[1]/lmax[num+1]
             _bias = _bias/norm
             bias.append(_bias.tolist())    
             _weights[0] = kappa*_weights[0]/l[num]
             _weights[1] = _weights[1]*0
+            if isinstance(_weights[1], int):
+                _weights.pop()
             new_weights.append(_weights)
             vthr.append(norm*kappa) 
             num += 1
@@ -173,10 +176,7 @@ class cnn_to_snn(object):
         for layer in new_model.layers:
             layer_type = type(layer).__name__ 
             if hasattr(layer, 'activation') and layer_type != 'Activation':
-                if layer.use_bias:
-                    layer.set_weights(weights[m])
-                else:
-                    layer.set_weights(weights[m][0])
+                layer.set_weights(weights[m])
                 m += 1
         new_model.compile('adam', 'categorical_crossentropy', ['accuracy']) 
         print('New model generated!')
