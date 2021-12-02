@@ -121,7 +121,7 @@ class build_model:
         y_train = keras.utils.to_categorical(y_train, self.num_classes)
         y_test = keras.utils.to_categorical(y_test, self.num_classes)
 
-        lr_decayed_fn = tf.keras.optimizers.schedules.CosineDecay(learning_rate, maxepoches) 
+        lr_decayed_fn = optimizers.schedules.CosineDecay(learning_rate, maxepoches) 
         reduce_lr = keras.callbacks.LearningRateScheduler(lr_decayed_fn)
 
         #data augmentation
@@ -153,6 +153,5 @@ class build_model:
         return model
 
 if __name__ == '__main__':
-    with tf.device(gpu):
-        model = build_model(train=1)
-        mdl = model.extract_model()
+    model = build_model(train=1)
+    mdl = model.extract_model()
