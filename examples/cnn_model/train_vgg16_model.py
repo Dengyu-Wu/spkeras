@@ -138,11 +138,9 @@ class build_model:
     def train(self,model):
         #training parameters
         batch_size = 128
-        maxepoches = 280
-        learning_rate = 0.01
+        maxepoches = 300
+        learning_rate = 0.1
         lr_decay = 1e-6
-        lr_drop0 = 70
-        lr_drop1 = 140
         # The data, shuffled and split between train and test sets:
         (x_train, y_train), (x_test, y_test) = cifar10.load_data()
         x_train = x_train/255
@@ -153,10 +151,8 @@ class build_model:
         y_train = keras.utils.to_categorical(y_train, self.num_classes)
         y_test = keras.utils.to_categorical(y_test, self.num_classes)
 
-        def lr_scheduler(epoch):
-            return learning_rate * (0.1** (epoch //lr_drop1 ))*5**(not (epoch // lr_drop0)%2)
-        
-        reduce_lr = keras.callbacks.LearningRateScheduler(lr_scheduler)
+        lr_decayed_fn = optimizers.schedules.CosineDecay(learning_rate,maxepoches) 
+        reduce_lr = keras.callbacks.LearningRateScheduler(lr_decayed_fn)
 
         #data augmentation
         datagen = ImageDataGenerator(
