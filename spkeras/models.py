@@ -219,8 +219,8 @@ class cnn_to_snn(object):
         #k = 0
         lmax = np.max(x_train) 
         l = []
-        if model.layers[0].name != 'input':
-            l.append(lmax)
+        #if model.layers[0].name != 'input':
+        l.append(lmax)
         print('Extracting Lambda...')#,end='')
         k = 0
         layer_num = len(model.layers)
