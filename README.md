@@ -133,7 +133,7 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 
 <!-- Citation -->
 ## Citation
-For more details, please refer to the <a href="https://www.frontiersin.org/articles/10.3389/fnins.2022.759900/abstract">paper</a>.
+For more details, please refer to the <a href="https://doi.org/10.3389/fnins.2022.759900">paper</a>.
 
 ```
 @article{wu2022little,
@@ -141,9 +141,8 @@ For more details, please refer to the <a href="https://www.frontiersin.org/artic
   author={Wu, Dengyu and Yi, Xinping and Huang, Xiaowei},
   journal={Frontiers in neuroscience},
   volume={16},
-  year={2022},
-  publisher={Frontiers Media SA}
-}
+  year={2022}
+  }
 ```
 
 
