@@ -133,6 +133,8 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 
 <!-- Citation -->
 ## Citation
+For more details, please refer to the <a href="https://www.frontiersin.org/articles/10.3389/fnins.2022.759900/abstract">paper</a>.
+
 ```
 @article{wu2022little,
   title={A Little Energy Goes a Long Way: Build an Energy-Efficient, Accurate Spiking Neural Network From Convolutional Neural Network},
@@ -143,8 +145,5 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
   publisher={Frontiers Media SA}
 }
 ```
-<!-- PUBLICATION -->
-## More details
-<a href="https://www.frontiersin.org/articles/10.3389/fnins.2022.759900/abstract">paper</a>
 
 
