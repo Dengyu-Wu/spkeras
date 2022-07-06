@@ -134,6 +134,6 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 
 <!-- PUBLICATION -->
 ## More details
-<a href="https://www.frontiersin.org/articles/10.3389/fnins.2022.759900/abstract">paper</a> [<a href="https://arxiv.org/abs/2103.00944">pre-print</a>]
+<a href="https://www.frontiersin.org/articles/10.3389/fnins.2022.759900/abstract">paper</a>
 
 
