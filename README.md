@@ -132,7 +132,7 @@ _For more examples, please refer to the [Examples](./examples/)_
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 
 <!-- Citation -->
-##Citation
+## Citation
 @article{wu2022little,
   title={A Little Energy Goes a Long Way: Build an Energy-Efficient, Accurate Spiking Neural Network From Convolutional Neural Network},
   author={Wu, Dengyu and Yi, Xinping and Huang, Xiaowei},
