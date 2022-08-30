@@ -122,7 +122,7 @@ mode: set 1 to exclude average pooling layer, default 0
 '''
 ```
 <!-- USAGE EXAMPLES -->
-## Usage
+## Examples
 
 _For more examples, please refer to the [Examples](./examples/)_
 
