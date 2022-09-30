@@ -36,7 +36,7 @@ pip install tensorflow
 
 1. Clone the repo
 ```sh
-git clone https://github.com/(Anonymous)/spkeras.git
+git clone https://github.com/Dengyu-Wu/spkeras.git
 ```
 ### Coding for SpKeras 
 SpKeras will detect the Activation Layer in CNN to create SpikeActivation Layer. It means all activation function should stay inside Activation Layer, including Softmax and Sigmoid. 
