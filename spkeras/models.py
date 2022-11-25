@@ -165,12 +165,13 @@ class cnn_to_snn(object):
                     layers.append(layer)
             num+=1
         new_mdl['config']['layers'] = layers
+        inbound_nodes=layers[-1]['config']['name']
+        new_mdl['config']['output_layers'] =  [[inbound_nodes, 0, 0]]
         new_mdl = json.dumps(new_mdl)
         new_model = model_from_json(new_mdl,
                                      custom_objects={'SpikeActivation':SpikeActivation})
         input_shape = model.layers[0].input_shape
-        #new_model.build(input_shape)                            
-        #new_model = keras.Model(inputs=inputs, outputs=outputs)
+
 
         m = 0
         for layer in new_model.layers:
