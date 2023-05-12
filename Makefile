@@ -2,7 +2,7 @@
 
 PKG_SRC_DIR=./spkeras
 PKG_NAME=spkeras
-PKG_AUTHOR=""
+PKG_AUTHOR="Dengyu Wu"
 PKG_AUTHOR_EMAIL=""
 PKG_DESC="Spiking Neural Networks in Keras"
 PKG_LONG_DESC="Spiking Neural Networks in Keras"
